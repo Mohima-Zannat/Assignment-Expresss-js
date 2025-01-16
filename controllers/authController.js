@@ -8,7 +8,7 @@ const getHelloWorld = (req, res) => {
 };
 
 const generateToken = (req, res) => {
-  const payload = { user: "testUser" }; // Replace with dynamic data as needed
+  const payload = { user: "testUser" };
   const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" });
 
   res.status(200).json({ token });
